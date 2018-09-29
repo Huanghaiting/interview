@@ -13,6 +13,7 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
+    
     prolist: [
       {
         logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538800545&di=0415ca91d1a5f4e9ec0785eea4d9470a&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F0199be56f3c06432f875a94411c7db.png%401280w_1l_2o_100sh.png',
@@ -56,14 +57,13 @@ Page({
   clickMe: function () {
     var arr = [];
     arr = this.data.prolist;
-    for (var i = -1; i < arr.length; i++) {
-      var a = arr.shift(0);
+      var a = arr.shift();
       arr.push(a);
-    }
+    
     this.data.prolist = arr;
     this.setData({
       'prolist': this.data.prolist
     });
   },
- 
+  
 })
