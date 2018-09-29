@@ -14,7 +14,7 @@
     </view>
     <view class='title'>{{item.title}}</view>
     <view class='des'>{{item.des}}</view>
-    <view  bindtap="clickMe">
+    <view  bindtap="clickMe" data-index="{{index}}">
     <button class='btn' >{{item.btn}}</button>
     </view>
   </view>
