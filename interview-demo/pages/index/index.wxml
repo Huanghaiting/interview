@@ -1,0 +1,22 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item >
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="section">
+  <view class='main' wx:for="{{prolist}}" >
+    <view class='img_game'>
+    <image src='{{item.logo}}'></image>
+    </view>
+    <view class='title'>{{item.title}}</view>
+    <view class='des'>{{item.des}}</view>
+    <view data-index="{{index}}" bindtap="clickMe">
+    <button class='btn' >{{item.btn}}</button>
+    </view>
+  </view>
+</view>
+
